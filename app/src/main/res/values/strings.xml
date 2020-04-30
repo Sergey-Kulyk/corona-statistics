@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Corona Statistics</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logo_c">C</string>
+    <string name="logo_covid_19">OVID-19</string>
+    <string name="logo_coronavirus">ORONAVIRUS</string>
+
+    <string name="statistics_cases">Cases</string>
+    <string name="statistics_active">Active</string>
+    <string name="statistics_recovered">Recovered</string>
+    <string name="statistics_death">Death</string>
+
 </resources>

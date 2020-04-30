@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/cLetter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:includeFontPadding="false"
+        android:text="@string/logo_c"
+        android:textColor="#C9CBD3"
+        android:textSize="80sp" />
+
+    <TextView
+        android:id="@+id/covid19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="26dp"
+        android:layout_toEndOf="@id/cLetter"
+        android:fontFamily="@font/ibm_plex_sans_medium"
+        android:includeFontPadding="false"
+        android:text="@string/logo_covid_19"
+        android:textColor="@color/grayDark"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/covid19"
+        android:layout_alignBottom="@id/cLetter"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@id/cLetter"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:includeFontPadding="false"
+        android:text="@string/logo_coronavirus"
+        android:textColor="@color/gray"
+        android:textSize="26sp" />
+
+</RelativeLayout>
