@@ -1,4 +1,4 @@
-package com.sergeykulyk.covid_19
+package com.sergeykulyk.corona_statistics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.sergeykulyk.covid_19
+package com.sergeykulyk.`corona-statistics`
 
 import org.junit.Test
 
