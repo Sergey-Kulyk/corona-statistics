@@ -15,8 +15,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "BASE_URL", '"https://api.covid19api.com"'
-        buildConfigField "String", "NOVEL_COVID_API", '"https://corona.lmao.ninja/v2/"'
+        buildConfigField "String", "BASE_URL", '"https://corona.lmao.ninja/v2/"'
     }
 
     buildTypes {
@@ -29,7 +28,9 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
-
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
 }
 
 def retrofit_version = "2.7.0"

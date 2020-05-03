@@ -1,4 +1,4 @@
-package com.sergeykulyk.corona_statistics.data.dto.novel_covid_19
+package com.sergeykulyk.corona_statistics.data.dto
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

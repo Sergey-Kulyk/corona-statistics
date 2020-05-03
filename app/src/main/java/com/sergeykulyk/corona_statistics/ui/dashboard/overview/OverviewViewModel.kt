@@ -1,17 +1,13 @@
 package com.sergeykulyk.corona_statistics.ui.dashboard.overview
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.sergeykulyk.corona_statistics.data.dto.GlobalDto
-import com.sergeykulyk.corona_statistics.data.dto.SummaryDto
-import com.sergeykulyk.corona_statistics.data.dto.novel_covid_19.AllDto
-import com.sergeykulyk.corona_statistics.data.dto.novel_covid_19.CountryDto
-import com.sergeykulyk.corona_statistics.data.dto.novel_covid_19.toMapCountry
-import com.sergeykulyk.corona_statistics.data.dto.toMapCountry
+import com.sergeykulyk.corona_statistics.data.dto.AllDto
+import com.sergeykulyk.corona_statistics.data.dto.ContinentDto
+import com.sergeykulyk.corona_statistics.data.dto.toContinentStatistics
 import com.sergeykulyk.corona_statistics.data.dvo.OverviewStatistics
 import com.sergeykulyk.corona_statistics.io.rest.Rest
-import com.sergeykulyk.map_statistics.MapCountry
+import com.sergeykulyk.map_statistics.ContinentStatistics
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,24 +15,24 @@ import retrofit2.Response
 class OverviewViewModel : ViewModel() {
 
     val statisticsLiveData = MutableLiveData<List<OverviewStatistics>>()
-    val mapCountriesLiveData = MutableLiveData<List<MapCountry>>()
+    val mapCountriesLiveData = MutableLiveData<List<ContinentStatistics>>()
 
     fun getStatistics() {
-        val result = Rest.novelCovidApi.getMultipleCountries()
-        result.enqueue(object : Callback<List<CountryDto>> {
-            override fun onFailure(call: Call<List<CountryDto>>, t: Throwable) {
+        val result = Rest.covid19.getContinents()
+        result.enqueue(object : Callback<List<ContinentDto>> {
+            override fun onFailure(call: Call<List<ContinentDto>>, t: Throwable) {
                 t.message
             }
 
-            override fun onResponse(call: Call<List<CountryDto>>, response: Response<List<CountryDto>>) {
+            override fun onResponse(call: Call<List<ContinentDto>>, response: Response<List<ContinentDto>>) {
                 response.body()?.let { body ->
-                    val mapCountries = body.map { it.toMapCountry() }
+                    val mapCountries = body.map { it.toContinentStatistics() }
                     mapCountriesLiveData.postValue(mapCountries)
                 }
             }
         })
 
-        val result1 = Rest.novelCovidApi.getAll()
+        val result1 = Rest.covid19.getAll()
         result1.enqueue(object : Callback<AllDto> {
             override fun onFailure(call: Call<AllDto>, t: Throwable) {
                 t.message

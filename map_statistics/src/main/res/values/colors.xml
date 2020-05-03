@@ -13,4 +13,11 @@
     <color name="percent90">#924F5B</color>
     <color name="percent100">#A63146</color>
 
+    <color name="percent1">#C2435A</color>
+    <color name="percent2">#8A94B6</color>
+    <color name="percent3">#3B4569</color>
+    <color name="percent4">#434C69</color>
+    <color name="percent5">#383D4E</color>
+    <color name="percent6">#181C2B</color>
+
 </resources>

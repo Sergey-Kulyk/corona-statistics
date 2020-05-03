@@ -6,46 +6,66 @@ import com.sergeykulyk.map_statistics.MapCountry
 
 class CountryDto {
 
-    @SerializedName("Country")
+    @SerializedName("updated")
+    @Expose
+    var updated: Long? = null
+
+    @SerializedName("country")
     @Expose
     var country: String? = null
 
-    @SerializedName("CountryCode")
+    @SerializedName("countryInfo")
     @Expose
-    var countryCode: String? = null
+    var countryInfoDto: CountryInfoDto? = null
 
-    @SerializedName("Slug")
+    @SerializedName("cases")
     @Expose
-    var slug: String? = null
+    var cases: Int? = null
 
-    @SerializedName("NewConfirmed")
+    @SerializedName("todayCases")
     @Expose
-    var newConfirmed: Int? = null
+    var todayCases: Int? = null
 
-    @SerializedName("TotalConfirmed")
+    @SerializedName("deaths")
     @Expose
-    var totalConfirmed: Int? = null
+    var deaths: Int? = null
 
-    @SerializedName("NewDeaths")
+    @SerializedName("todayDeaths")
     @Expose
-    var newDeaths: Int? = null
+    var todayDeaths: Int? = null
 
-    @SerializedName("TotalDeaths")
+    @SerializedName("recovered")
     @Expose
-    var totalDeaths: Int? = null
+    var recovered: Int? = null
 
-    @SerializedName("NewRecovered")
+    @SerializedName("active")
     @Expose
-    var newRecovered: Int? = null
+    var active: Int? = null
 
-    @SerializedName("TotalRecovered")
+    @SerializedName("critical")
     @Expose
-    var totalRecovered: Int? = null
+    var critical: Int? = null
 
-    @SerializedName("Date")
+    @SerializedName("casesPerOneMillion")
     @Expose
-    var date: String? = null
+    var casesPerOneMillion: Int? = null
+
+    @SerializedName("deathsPerOneMillion")
+    @Expose
+    var deathsPerOneMillion: Int? = null
+
+    @SerializedName("tests")
+    @Expose
+    var tests: Int? = null
+
+    @SerializedName("testsPerOneMillion")
+    @Expose
+    var testsPerOneMillion: Int? = null
+
+    @SerializedName("continent")
+    @Expose
+    var continent: String? = null
 
 }
 
-fun CountryDto.toMapCountry() = MapCountry(slug ?: "", totalConfirmed ?: 0)
+fun CountryDto.toMapCountry() = MapCountry(country?.toLowerCase() ?: "", cases ?: 0)

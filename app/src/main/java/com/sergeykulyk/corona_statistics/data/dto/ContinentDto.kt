@@ -1,9 +1,10 @@
-package com.sergeykulyk.corona_statistics.data.dto.novel_covid_19
+package com.sergeykulyk.corona_statistics.data.dto
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import com.sergeykulyk.map_statistics.ContinentStatistics
 
-class AllDto {
+class ContinentDto {
 
     @SerializedName("updated")
     @Expose
@@ -37,24 +38,14 @@ class AllDto {
     @Expose
     var critical: Int? = null
 
-    @SerializedName("casesPerOneMillion")
+    @SerializedName("continent")
     @Expose
-    var casesPerOneMillion: Int? = null
+    var continent: String? = null
 
-    @SerializedName("deathsPerOneMillion")
+    @SerializedName("countries")
     @Expose
-    var deathsPerOneMillion: Int? = null
-
-    @SerializedName("tests")
-    @Expose
-    var tests: Int? = null
-
-    @SerializedName("testsPerOneMillion")
-    @Expose
-    var testsPerOneMillion: Double? = null
-
-    @SerializedName("affectedCountries")
-    @Expose
-    var affectedCountries: Int? = null
+    var countries: List<String>? = null
 
 }
+
+fun ContinentDto.toContinentStatistics() = ContinentStatistics(continent ?: "", cases ?: 0)

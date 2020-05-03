@@ -1,8 +1,7 @@
 package com.sergeykulyk.corona_statistics.ui.dashboard.overview
 
 import com.sergeykulyk.corona_statistics.R
-import com.sergeykulyk.corona_statistics.data.dto.GlobalDto
-import com.sergeykulyk.corona_statistics.data.dto.novel_covid_19.AllDto
+import com.sergeykulyk.corona_statistics.data.dto.AllDto
 import com.sergeykulyk.corona_statistics.data.dvo.OverviewStatistics
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
@@ -18,10 +17,10 @@ class OverviewStatisticsBuilder(private val allDto: AllDto) {
         val recoveredNumber = formatTotalNumber(allDto.recovered)
         val deathsNumber = formatTotalNumber(allDto.deaths)
 
-        val casesPercent = formatNewPercent(allDto.todayCases!!, allDto.cases!!)
-        val activePercent = formatNewPercent(allDto.active!!, allDto.critical!!)
-        val recoveredPercent = formatNewPercent(allDto.todayCases!! - allDto.recovered!! - allDto.active!!, allDto.recovered!!)
-        val deathsPercent = formatNewPercent(allDto.todayDeaths!!, allDto.deaths!!)
+        val casesPercent = formatPercent(allDto.cases!!, allDto.cases!!)
+        val activePercent = formatPercent(allDto.active!!, allDto.cases!!)
+        val recoveredPercent = formatPercent(allDto.recovered!!, allDto.cases!!)
+        val deathsPercent = formatPercent(allDto.deaths!!, allDto.cases!!)
 
         val cases = OverviewStatistics(
             R.drawable.ic_statistics_cases,
@@ -99,11 +98,11 @@ class OverviewStatisticsBuilder(private val allDto: AllDto) {
         return myFormatter.format(number ?: 0)
     }
 
-    private fun formatNewPercent(new: Int, total: Int): String {
+    private fun formatPercent(new: Int, total: Int): String {
         return "${calculatePercentNew(new, total)}%"
     }
 
-    private fun calculatePercentNew(new: Int, total: Int): Int {
-        return (new * 100f / total).roundToInt()
+    private fun calculatePercentNew(cases: Int, total: Int): Int {
+        return (cases * 100f / total).roundToInt()
     }
 }
