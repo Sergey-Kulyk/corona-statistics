@@ -6,4 +6,8 @@
 
     <color name="gray">#C9CBD3</color>
     <color name="grayDark">#62697C</color>
+
+    <color name="mapStatistics1">#A63146</color>
+    <color name="mapPercent0">#1E2335</color>
+
 </resources>

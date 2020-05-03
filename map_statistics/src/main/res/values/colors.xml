@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="percent0">#1E2335</color>
+    <color name="percent10">#3B4569</color>
+    <color name="percent20">#69749D</color>
+    <color name="percent30">#909CCA</color>
+    <color name="percent40">#BAC1DC</color>
+    <color name="percent50">#E9AFAE</color>
+    <color name="percent60">#DA8090</color>
+    <color name="percent70">#D35F5F</color>
+    <color name="percent80">#C2435A</color>
+    <color name="percent90">#924F5B</color>
+    <color name="percent100">#A63146</color>
+
+</resources>

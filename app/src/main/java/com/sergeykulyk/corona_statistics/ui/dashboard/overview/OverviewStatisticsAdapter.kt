@@ -8,7 +8,7 @@ import com.sergeykulyk.corona_statistics.R
 import com.sergeykulyk.corona_statistics.data.dvo.OverviewStatistics
 import kotlinx.android.synthetic.main.item_statistics.view.*
 
-class OverviewStatisticsAdapter(private val items: List<OverviewStatistics>) :
+class OverviewStatisticsAdapter(var items: List<OverviewStatistics> = listOf()) :
     RecyclerView.Adapter<OverviewStatisticsAdapter.StatisticsViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StatisticsViewHolder {

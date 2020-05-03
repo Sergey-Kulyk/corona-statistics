@@ -22,21 +22,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_gravity="top"
-                android:layout_marginTop="6dp"
                 android:layout_marginEnd="16dp"
                 android:gravity="center_vertical"
                 app:layout_collapseMode="pin">
 
                 <include
+                    android:id="@+id/logo"
                     layout="@layout/content_logo"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <Space
-                    android:id="@+id/circle_collapsed_target"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="end" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" />
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -56,25 +51,24 @@
             android:orientation="vertical"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <com.sergeykulyk.corona_statistics.ui.map.MapStatisticsView
+            <com.sergeykulyk.map_statistics.MapStatisticsView
                 android:id="@+id/mapStatisticsView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="-20dp"
-                android:layout_marginEnd="40dp"
-                android:background="@android:color/transparent" />
+                android:layout_marginEnd="40dp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/statisticsRecyclerView"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
                 android:clipToPadding="false"
                 android:nestedScrollingEnabled="false"
                 android:orientation="horizontal"
                 android:paddingStart="24dp"
                 android:paddingEnd="24dp"
-                android:paddingBottom="24dp"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:itemCount="2"
                 tools:listitem="@layout/item_statistics"
@@ -91,9 +85,10 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="150dp"
         android:alpha="0.7"
+        android:elevation="4dp"
         android:src="@drawable/im_virus"
         app:finalHeight="200dp"
-        app:finalXPosition="480dp"
+        app:finalXPosition="470dp"
         app:finalYPosition="-90dp"
         app:layout_behavior=".ui.dashboard.overview.AvatarImageBehavior"
         tools:ignore="ContentDescription" />
