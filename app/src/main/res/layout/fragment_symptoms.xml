@@ -1,9 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
     tools:context=".ui.dashboard.symptoms.SymptomsFragment">
 
+    <TextView
+        style="@style/TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tab_symptoms" />
 
-</FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingTop="16dp"
+        android:paddingBottom="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp">
+
+                <ImageView
+                    android:id="@+id/imageGirl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/im_girl"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="ContentDescription" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@drawable/gradient_black"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageGirl"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/fever"
+                    style="@style/SymptomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:drawableBottom="@drawable/ic_underline_fever"
+                    android:drawablePadding="12dp"
+                    android:text="@string/symptoms_fever"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/headache"
+                    style="@style/SymptomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:drawableBottom="@drawable/ic_underline_headache"
+                    android:gravity="end"
+                    android:text="@string/symptoms_headache"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/runnyNose"
+                    style="@style/SymptomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawableBottom="@drawable/ic_underline_runny_nose"
+                    android:gravity="start"
+                    android:text="@string/symptoms_runny_nose"
+                    app:layout_constraintStart_toStartOf="@+id/fever"
+                    app:layout_constraintTop_toBottomOf="@+id/fever" />
+
+                <TextView
+                    android:id="@+id/throatPain"
+                    style="@style/SymptomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawableBottom="@drawable/ic_underline_throat_pain"
+                    android:gravity="end"
+                    android:text="@string/symptoms_throat_pain"
+                    app:layout_constraintEnd_toEndOf="@+id/headache"
+                    app:layout_constraintTop_toBottomOf="@+id/headache" />
+
+                <TextView
+                    android:id="@+id/shakingChills"
+                    style="@style/SymptomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawableTop="@drawable/ic_underline_shaking_chills"
+                    android:gravity="start"
+                    android:text="@string/symptoms_shaking_chills"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/runnyNose" />
+
+                <TextView
+                    android:id="@+id/dyspnea"
+                    style="@style/SymptomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_underline_dypsnoea"
+                    android:gravity="end"
+                    android:text="@string/symptoms_dyspnea"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/throatPain" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:fillViewport="true"
+                android:overScrollMode="never"
+                android:padding="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/symptom_icon_size"
+                        android:layout_height="@dimen/symptom_icon_size"
+                        android:src="@drawable/ic_symptoms_fever"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:layout_width="@dimen/symptom_icon_size"
+                        android:layout_height="@dimen/symptom_icon_size"
+                        android:layout_marginStart="@dimen/symptom_icon_margin_start"
+                        android:src="@drawable/ic_symptoms_runny_nose"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:layout_width="@dimen/symptom_icon_size"
+                        android:layout_height="@dimen/symptom_icon_size"
+                        android:layout_marginStart="@dimen/symptom_icon_margin_start"
+                        android:src="@drawable/ic_symptoms_throat_pain1"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:layout_width="@dimen/symptom_icon_size"
+                        android:layout_height="@dimen/symptom_icon_size"
+                        android:layout_marginStart="@dimen/symptom_icon_margin_start"
+                        android:src="@drawable/ic_symptoms_shaking_chills"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:layout_width="@dimen/symptom_icon_size"
+                        android:layout_height="@dimen/symptom_icon_size"
+                        android:layout_marginStart="@dimen/symptom_icon_margin_start"
+                        android:src="@drawable/ic_symptoms_throat_pain"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -16,4 +16,13 @@
     <string name="tab_prevention">PREVENTION</string>
     <string name="tab_statistics">STATISTICS</string>
 
+
+    <!--  SYMPTOMS  -->
+    <string name="symptoms_fever">FEVER</string>
+    <string name="symptoms_headache">HEADACHE</string>
+    <string name="symptoms_runny_nose">RUNNY NOSE</string>
+    <string name="symptoms_throat_pain">THROAT PAIN</string>
+    <string name="symptoms_shaking_chills">SHAKING CHILLS</string>
+    <string name="symptoms_dyspnea">DYSPNEA</string>
+
 </resources>

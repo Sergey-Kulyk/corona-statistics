@@ -2,5 +2,13 @@
 <resources>
 
     <dimen name="overview_statistics_space">16dp</dimen>
+    <dimen name="title_size">26sp</dimen>
+    <dimen name="symptom_size">14sp</dimen>
+
+    <dimen name="symptoms_virus_small_size">5dp</dimen>
+    <dimen name="symptoms_virus_medium_size">8dp</dimen>
+
+    <dimen name="symptom_icon_size">70dp</dimen>
+    <dimen name="symptom_icon_margin_start">16dp</dimen>
 
 </resources>
