@@ -19,7 +19,7 @@
         android:paddingStart="48dp"
         android:paddingTop="120dp"
         android:paddingEnd="48dp"
-        android:paddingBottom="44dp"
+        android:paddingBottom="8dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

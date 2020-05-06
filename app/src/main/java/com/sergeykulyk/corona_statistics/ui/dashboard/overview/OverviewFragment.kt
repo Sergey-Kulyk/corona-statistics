@@ -32,7 +32,7 @@ class OverviewFragment : Fragment(), AppBarLayout.OnOffsetChangedListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        appBarLayout.addOnOffsetChangedListener(this)
+//        appBarLayout.addOnOffsetChangedListener(this)
         virus.setOnClickListener { startVirusRubberAnimation(it) }
 
         val adapter = OverviewStatisticsAdapter()

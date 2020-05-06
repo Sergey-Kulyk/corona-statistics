@@ -65,5 +65,6 @@ dependencies {
 
     implementation project(':map_statistics')
 
+    implementation 'com.github.devsideal:VectorChildFinder:1.0.0'
 
 }

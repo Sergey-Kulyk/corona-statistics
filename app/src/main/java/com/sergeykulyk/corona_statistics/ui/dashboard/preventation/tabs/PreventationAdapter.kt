@@ -27,13 +27,7 @@ class PreventationAdapter(private val slides: List<Preventation>) :
     inner class PreventationViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(item: Preventation) {
-            itemView.preventationIcon.setOnClickListener {
-                ViewAnimator.animate(it)
-                    .tada()
-                    .duration(1000)
-                    .accelerate()
-                    .start()
-            }
+            animatePreventationIcon()
             itemView.preventationIcon.setImageResource(item.icon)
             itemView.preventationTitle.setText(item.title)
             itemView.preventationDescription.setText(item.description)
@@ -44,6 +38,20 @@ class PreventationAdapter(private val slides: List<Preventation>) :
             itemView.learMoreButton.setOnClickListener {
                 animatePlayButton(it)
             }
+        }
+
+        private fun animatePreventationIcon() {
+            ViewAnimator.animate(itemView.preventationIcon)
+                .scale(1.2f)
+                .duration(700)
+                .onStop {
+                    ViewAnimator.animate(itemView.preventationIcon)
+                        .scale(1f)
+                        .duration(700)
+                        .onStop { animatePreventationIcon() }
+                        .start()
+                }
+                .start()
         }
 
         private fun animatePlayButton(it: View?) {
