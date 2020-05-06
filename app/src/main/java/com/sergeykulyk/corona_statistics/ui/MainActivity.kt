@@ -10,7 +10,9 @@ import com.sergeykulyk.corona_statistics.R
 import com.sergeykulyk.corona_statistics.ext.gone
 import com.sergeykulyk.corona_statistics.ext.show
 import com.sergeykulyk.corona_statistics.ui.dashboard.DashboardPageAdapter
+import com.sergeykulyk.corona_statistics.ui.dashboard.preventation.tabs.ZoomOutPageTransformer
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_do.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +24,10 @@ class MainActivity : AppCompatActivity() {
         dashboardViewPager.adapter = DashboardPageAdapter(supportFragmentManager)
         dashboardTabs.setupWithViewPager(dashboardViewPager)
         dashboardViewPager.offscreenPageLimit = 4
+//        val zoomOutPageTransformer = ZoomOutPageTransformer()
+////        dashboardViewPager.setPageTransformer(false) { page, position ->
+////            zoomOutPageTransformer.transformPage(page, position)
+////        }
 
         val tabOverview = dashboardTabs.getTabAt(0)
         val tabSymptoms = dashboardTabs.getTabAt(1)
@@ -65,7 +71,8 @@ class MainActivity : AppCompatActivity() {
                 val tabViewChild = tab.view.findViewById<TextView>(android.R.id.text1)
                 val tabIcon = tab.view.findViewById<ImageView>(android.R.id.icon)
                 tabIcon.gone()
-                tabViewChild.typeface = ResourcesCompat.getFont(baseContext, R.font.ibm_plex_sans_medium)
+                tabViewChild.typeface =
+                    ResourcesCompat.getFont(baseContext, R.font.ibm_plex_sans_medium)
                 tabViewChild.textSize = 14f
             }
         })

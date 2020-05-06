@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.sergeykulyk.corona_statistics.R
 import com.sergeykulyk.corona_statistics.getResources
 import com.sergeykulyk.corona_statistics.ui.dashboard.overview.OverviewFragment
+import com.sergeykulyk.corona_statistics.ui.dashboard.preventation.PreventationFragment
 import com.sergeykulyk.corona_statistics.ui.dashboard.symptoms.SymptomsFragment
 
 class DashboardPageAdapter(fragmentManager: FragmentManager) :
@@ -14,7 +15,7 @@ class DashboardPageAdapter(fragmentManager: FragmentManager) :
     override fun getItem(position: Int): Fragment {
         return  when (position) {
             1 -> SymptomsFragment()
-            2 -> SymptomsFragment()
+            2 -> PreventationFragment()
             3 -> SymptomsFragment()
             else -> OverviewFragment()
         }

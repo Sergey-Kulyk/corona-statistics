@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="111dp"
+    android:height="55dp"
+    android:viewportWidth="111"
+    android:viewportHeight="55">
+  <path
+      android:name="preventationDoBackground"
+      android:pathData="M0.465,9.252C0.22,4.376 4.361,0.42 9.221,0.887L101.016,9.722C104.897,10.096 107.943,13.213 108.228,17.102L110.32,45.709C110.678,50.596 106.598,54.653 101.713,54.268L9.341,46.987C5.332,46.671 2.181,43.429 1.979,39.413L0.465,9.252Z"
+      android:fillColor="#0F121C"/>
+</vector>

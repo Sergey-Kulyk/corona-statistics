@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    tools:context=".ui.dashboard.preventation.PreventationFragment">
+
+    <TextView
+        style="@style/TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/tab_prevention" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/doTabButton"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_tab_do_background"
+            android:fontFamily="@font/ibm_plex_sans_semibold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/preventation_tab_do"
+            android:textAllCaps="false"
+            android:textColor="@color/gray" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/dontTabButton"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_tab_dont_background"
+            android:fontFamily="@font/ibm_plex_sans_semibold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/preventation_tab_dont"
+            android:textAllCaps="false"
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+
+    <com.sergeykulyk.corona_statistics.ui.dashboard.preventation.NonSwipeableViewPager
+        android:id="@+id/preventationViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:overScrollMode="never" />
+
+</LinearLayout>

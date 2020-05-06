@@ -24,4 +24,16 @@
         <item name="android:drawablePadding">12dp</item>
     </style>
 
+    <style name="PreventationTitleText" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/preventation_title_size</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:fontFamily">@font/ibm_plex_sans_medium</item>
+    </style>
+
+    <style name="PreventationDescriptionText" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/preventation_description_size</item>
+        <item name="android:textColor">#51535B</item>
+        <item name="android:fontFamily">@font/ibm_plex_sans_regular</item>
+    </style>
+
 </resources>

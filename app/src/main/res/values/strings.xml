@@ -16,7 +16,6 @@
     <string name="tab_prevention">PREVENTION</string>
     <string name="tab_statistics">STATISTICS</string>
 
-
     <!--  SYMPTOMS  -->
     <string name="symptoms_fever">FEVER</string>
     <string name="symptoms_headache">HEADACHE</string>
@@ -24,5 +23,14 @@
     <string name="symptoms_throat_pain">THROAT PAIN</string>
     <string name="symptoms_shaking_chills">SHAKING CHILLS</string>
     <string name="symptoms_dyspnea">DYSPNEA</string>
+
+    <!--  PREVENTATION  -->
+    <string name="preventation_tab_do">Do</string>
+    <string name="preventation_tab_dont">Don\'t</string>
+
+    <string name="preventation_title_wear_mask">Wear Mask</string>
+    <string name="preventation_description_wear_mask">Wearing protective masks when going to ocrowded place. If you are healthy, you only need to wear a mask if you are taking care of a person with suspected 2019-nCoV infection...</string>
+    <string name="preventation_learn_more">Learn More</string>
+
 
 </resources>
