@@ -25,6 +25,7 @@ class PreventationFragment : Fragment() {
         val adapter = PreventationPagerAdapter(fragmentManager!!)
         preventationViewPager.adapter = adapter
 
+        doTabButton.isSelected = true
         doTabButton.setOnClickListener {
             it.isSelected = true
             dontTabButton.isSelected = false

@@ -7,14 +7,13 @@
     tools:background="#000"
     tools:context=".ui.dashboard.overview.OverviewFragment">
 
-
     <include
         android:id="@+id/logo"
         layout="@layout/content_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,12 +24,13 @@
         android:layout_gravity="center_horizontal"
         android:alpha="0.7"
         android:elevation="4dp"
-        android:maxWidth="250dp"
         android:maxHeight="250dp"
-
         android:src="@drawable/im_virus"
+        app:layout_constrainedHeight="true"
         app:layout_constraintBottom_toTopOf="@+id/mapStatisticsView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="250dp"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo"
         tools:ignore="ContentDescription" />
@@ -39,23 +39,25 @@
         android:id="@+id/mapStatisticsView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
         app:layout_constraintBottom_toTopOf="@+id/statisticsRecyclerView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/virus" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/statisticsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:clipToPadding="false"
         android:nestedScrollingEnabled="false"
         android:orientation="horizontal"
         android:overScrollMode="never"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
-        android:layout_marginBottom="24dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:itemCount="2"

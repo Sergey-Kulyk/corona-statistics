@@ -45,6 +45,6 @@ class ZoomOutPageTransformer : ViewPager.PageTransformer {
 
     companion object {
         private const val MIN_SCALE = 0.9f
-        private const val MIN_ALPHA = 0.6f
+        private const val MIN_ALPHA = 0.7f
     }
 }

@@ -5,13 +5,14 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_bg_app"
+    android:background="@drawable/bg_app"
     tools:context=".ui.MainActivity">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/dashboardViewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:overScrollMode="never"
         app:layout_constraintBottom_toTopOf="@+id/dashboardTabs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +35,7 @@
         app:tabIndicatorColor="#1C1F2E"
         app:tabIndicatorGravity="stretch"
         app:tabMode="scrollable"
+        app:tabTextColor="#40424A"
         app:tabPaddingEnd="0dp"
         app:tabPaddingStart="0dp"
         app:tabSelectedTextColor="@android:color/white" />

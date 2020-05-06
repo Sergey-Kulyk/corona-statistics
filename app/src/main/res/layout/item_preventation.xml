@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center">
 
-    <ScrollView
+    <View
         android:id="@+id/preventationInfoLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -15,46 +15,52 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="36dp"
         android:background="@drawable/bg_do_info"
+        android:fillViewport="true"
         android:overScrollMode="never"
-        android:paddingStart="48dp"
-        android:paddingTop="120dp"
-        android:paddingEnd="48dp"
-        android:paddingBottom="8dp"
-        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/preventationTitle"
+        style="@style/PreventationTitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/preventationInfoLayout"
+        app:layout_constraintStart_toStartOf="@+id/preventationInfoLayout"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        tools:text="Wear Mask" />
 
-            <TextView
-                android:id="@+id/preventationTitle"
-                style="@style/PreventationTitleText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Wear Mask" />
+    <TextView
+        android:id="@+id/preventationDescription"
+        style="@style/PreventationDescriptionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constrainedHeight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:lineSpacingExtra="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/learMoreButton"
+        app:layout_constraintEnd_toEndOf="@+id/preventationTitle"
+        app:layout_constraintStart_toStartOf="@+id/preventationTitle"
+        app:layout_constraintTop_toBottomOf="@+id/preventationTitle"
+        app:layout_constraintVertical_bias="0"
+        tools:text="Wearing protective masks when going to ocrowded place. If you are healthy, you only need to wear a mask if you are taking care of a person with suspected 2019-nCoV infection..." />
 
-            <TextView
-                android:id="@+id/preventationDescription"
-                style="@style/PreventationDescriptionText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:lineSpacingExtra="4dp"
-                tools:text="Wearing protective masks when going to ocrowded place. If you are healthy, you only need to wear a mask if you are taking care of a person with suspected 2019-nCoV infection..." />
-
-        </LinearLayout>
-
-    </ScrollView>
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/preventationInfoLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/preventationInfoLayout"
         tools:ignore="ContentDescription,MissingConstraints"
         tools:src="@drawable/ic_do_wear_mask">
 
@@ -77,11 +83,12 @@
     <FrameLayout
         android:id="@+id/playButtonLayout"
         android:layout_width="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@+id/preventationInfoLayout">
 
         <View
             android:layout_width="80dp"

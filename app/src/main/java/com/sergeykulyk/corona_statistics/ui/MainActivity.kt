@@ -48,6 +48,9 @@ class MainActivity : AppCompatActivity() {
         tabPrevention?.view?.findViewById<ImageView>(android.R.id.icon)?.gone()
         tabStatistics?.view?.findViewById<ImageView>(android.R.id.icon)?.gone()
 
+        // Add rotation for overview icon programmatically for better ui style.
+        tabOverview?.view?.findViewById<ImageView>(android.R.id.icon)?.rotation = 45f
+
         dashboardTabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 val tabViewChild = tab.view.findViewById<TextView>(android.R.id.text1)
