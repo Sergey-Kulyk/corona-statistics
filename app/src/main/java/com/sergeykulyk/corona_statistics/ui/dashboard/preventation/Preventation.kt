@@ -6,6 +6,5 @@ import androidx.annotation.StringRes
 data class Preventation(
     @DrawableRes var icon: Int,
     @StringRes val title: Int,
-    @StringRes var description: Int,
-    val videoLink: String
+    @StringRes var description: Int
 )

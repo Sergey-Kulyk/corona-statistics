@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 import com.sergeykulyk.corona_statistics.R
-import com.sergeykulyk.corona_statistics.ui.dashboard.preventation.Preventation
 import kotlinx.android.synthetic.main.fragment_dont.*
 
 class DontFragment : Fragment() {
@@ -34,17 +33,9 @@ class DontFragment : Fragment() {
         }
     }
 
-    private fun buildAdapter() = PreventationAdapter(getSlides())
-
-    private fun getSlides(): List<Preventation> {
-        val wearMask = Preventation(
-            R.drawable.ic_do_wear_mask,
-            R.string.preventation_title_wear_mask,
-            R.string.preventation_description_wear_mask,
-            ""
-        )
-
-        return listOf(wearMask, wearMask, wearMask)
+    private fun buildAdapter(): PreventationAdapter {
+        val slides = PreventationSlidesBuilder().buildDontSlides()
+        return PreventationAdapter(slides)
     }
 
 }

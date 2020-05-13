@@ -28,9 +28,37 @@
     <string name="preventation_tab_do">Do</string>
     <string name="preventation_tab_dont">Don\'t</string>
 
-    <string name="preventation_title_wear_mask">Wear Mask</string>
-    <string name="preventation_description_wear_mask">Wearing protective masks when going to ocrowded place. If you are healthy, you only need to wear a mask if you are taking care of a person with suspected 2019-nCoV infection...</string>
+    <string name="do_title_wear_mask">Wear Mask</string>
+    <string name="do_title_wash_hands">Wash Hands</string>
+    <string name="do_title_use_tissues">Use Tissues</string>
+    <string name="do_title_well_done_cooking">Well Done Cooking</string>
+    <string name="do_title_hand_sanitiser">Hand Sanitiser</string>
+    <string name="do_title_stay_at_home">Stay at Home</string>
+
+    <string name="do_description_wear_mask">Wearing protective masks when going to ocrowded place. If you are healthy, you only need to wear a mask if you are taking care of a person with suspected 2019-nCoV infection</string>
+    <string name="do_description_wash_hands">Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom, before eating, and after blowing your nose, coughing, or sneezing</string>
+    <string name="do_description_use_tissues">Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze</string>
+    <string name="do_description_well_done_cooking">Some foods require washing. Produce with a lot of nooks and crannies like cauliflower, broccoli or lettuce should be soaked for 1 to 2 minutes in cold clean water</string>
+    <string name="do_description_hand_sanitiser">If soap and water are not readily available, use an alcohol-based hand sanitiser with at least 60% alcohol. Always wash hands with soap and water when hands are visibly dirty</string>
+    <string name="do_description_stay_at_home">Stay home and self-isolate from others in the household if you feel unwell</string>
+
+    <string name="dont_title_social_distancing">Social Distancing</string>
+    <string name="dont_title_go_to_doctor">Go to Doctor</string>
+    <string name="dont_title_avoid_animal">Avoid Animal</string>
+    <string name="dont_title_avoid_touching">Avoid touching</string>
+    <string name="dont_title_avoid_crowd">Avoid Crowd</string>
+
+    <string name="dont_description_social_distancing">Social distancing is important because coronavirus spreads when an infected person coughs small droplets - packed with the virus - into the air</string>
+    <string name="dont_description_go_to_doctor">If you have a fever, cough and difficulty breathing, seek medical attention and go to doctor immediately</string>
+    <string name="dont_description_avoid_animal">Don\'t contact the animal. Avoid close contact (1 meter or 3 feet) with people who are unwell and animals</string>
+    <string name="dont_description_avoid_touching">Avoid touching your face eyes, nose, and mouth</string>
+    <string name="dont_description_avoid_crowd">Avoiding crowded public places. That means avoiding sick people, steering clear of crowds, staying home as much as possible, and keeping at least 6 feet away from others when you do go out</string>
+
     <string name="preventation_learn_more">Learn More</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="preventation_video_link" translatable="false">https://www.youtube.com/watch?v=gCi4GpM-alE</string>
+    <string name="preventation_learn_more_link" translatable="false">https://www.who.int/emergencies/diseases/novel-coronavirus-2019</string>
 
 
 </resources>
