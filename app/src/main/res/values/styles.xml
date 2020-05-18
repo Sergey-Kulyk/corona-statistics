@@ -36,4 +36,41 @@
         <item name="android:fontFamily">@font/ibm_plex_sans_regular</item>
     </style>
 
+    <style name="CountryInfoText" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/county_info_text_size</item>
+        <item name="android:textColor">#595B63</item>
+        <item name="android:fontFamily">@font/ibm_plex_sans_regular</item>
+    </style>
+
+    <style name="WorldwideText" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/county_info_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/ibm_plex_sans_medium</item>
+    </style>
+
+    <style name="StatisticsPercentText" parent="android:Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/ibm_plex_sans_medium</item>
+    </style>
+
+    <style name="StatisticsInfoText" parent="android:Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#3E4048</item>
+        <item name="android:fontFamily">@font/ibm_plex_sans_regular</item>
+    </style>
+
+    <style name="PercentLayoutStyle">
+        <item name="android:layout_width">@dimen/statistics_percent_block_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+        <!-- Base application theme. -->
+        <style name="AppBarTheme" parent="Theme.AppCompat.Light">
+            <item name="colorPrimary">@android:color/transparent</item>
+            <item name="windowActionBarOverlay">true</item>
+        </style>
+
 </resources>

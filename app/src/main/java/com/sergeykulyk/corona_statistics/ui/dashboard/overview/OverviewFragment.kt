@@ -146,7 +146,7 @@ class OverviewFragment : Fragment(), AppBarLayout.OnOffsetChangedListener {
     }
 
     companion object {
-        private const val TRANSITION_ANIMATION_DELAY = 600L
+        const val TRANSITION_ANIMATION_DELAY = 600L
         private const val VIRUS_ANIMATION_START_DELAY = 1000L
         private const val VIRUS_ANIMATION_DELAY = 22 * 1000L
         private const val DATA_UPDATE_DELAY = 1 * 10 * 1000L

@@ -60,5 +60,17 @@
     <string name="preventation_video_link" translatable="false">https://www.youtube.com/watch?v=gCi4GpM-alE</string>
     <string name="preventation_learn_more_link" translatable="false">https://www.who.int/emergencies/diseases/novel-coronavirus-2019</string>
 
+    <!--  Statistics  -->
+    <string name="statistics_place_holder">There have\nno data updated</string>
+    <string name="statistics_worldwide">Worldwide</string>
+
+    <string name="intener_connection_error">Internet connection error!</string>
+    <string name="intener_server_error">Server error, please try again!</string>
+    <string name="intener_something_went_wrong">Something went wrong!</string>
+
+    <string name="statistics_country_location">Location</string>
+    <string name="statistics_country_confirmed">Confirmed</string>
+    <string name="statistics_country_recovered">Recovered</string>
+    <string name="statistics_country_deaths">Deaths</string>
 
 </resources>

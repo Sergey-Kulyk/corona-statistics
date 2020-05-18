@@ -12,4 +12,9 @@
     <color name="mapStatistics1">#A63146</color>
     <color name="mapPercent0">#1E2335</color>
 
+    <color name="staticsCases">#4E7CFF</color>
+    <color name="statisticsActive">#7033FF</color>
+    <color name="statisticsRecovered">#F65164</color>
+    <color name="statisticsDeaths">#3A1C7B</color>
+
 </resources>

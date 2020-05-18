@@ -48,11 +48,11 @@ class CountryDto {
 
     @SerializedName("casesPerOneMillion")
     @Expose
-    var casesPerOneMillion: Int? = null
+    var casesPerOneMillion: Double? = null
 
     @SerializedName("deathsPerOneMillion")
     @Expose
-    var deathsPerOneMillion: Int? = null
+    var deathsPerOneMillion: Double? = null
 
     @SerializedName("tests")
     @Expose

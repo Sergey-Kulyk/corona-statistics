@@ -13,17 +13,9 @@ class AllDto {
     @Expose
     var cases: Int? = null
 
-    @SerializedName("todayCases")
-    @Expose
-    var todayCases: Int? = null
-
     @SerializedName("deaths")
     @Expose
     var deaths: Int? = null
-
-    @SerializedName("todayDeaths")
-    @Expose
-    var todayDeaths: Int? = null
 
     @SerializedName("recovered")
     @Expose
@@ -32,29 +24,5 @@ class AllDto {
     @SerializedName("active")
     @Expose
     var active: Int? = null
-
-    @SerializedName("critical")
-    @Expose
-    var critical: Int? = null
-
-    @SerializedName("casesPerOneMillion")
-    @Expose
-    var casesPerOneMillion: Int? = null
-
-    @SerializedName("deathsPerOneMillion")
-    @Expose
-    var deathsPerOneMillion: Int? = null
-
-    @SerializedName("tests")
-    @Expose
-    var tests: Int? = null
-
-    @SerializedName("testsPerOneMillion")
-    @Expose
-    var testsPerOneMillion: Double? = null
-
-    @SerializedName("affectedCountries")
-    @Expose
-    var affectedCountries: Int? = null
 
 }

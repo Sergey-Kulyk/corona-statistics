@@ -27,9 +27,9 @@ class OverviewStatisticsAdapter(var items: List<OverviewStatistics> = listOf()) 
     inner class StatisticsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(item: OverviewStatistics) {
             itemView.statisticsRoot.setBackgroundResource(item.background)
-            itemView.title.setText(item.title)
+            itemView.statisticsTitle.setText(item.title)
             itemView.number.text = item.number
-            itemView.percent.text = item.percent
+            itemView.percent.text = item.percentFormatted
         }
     }
 }

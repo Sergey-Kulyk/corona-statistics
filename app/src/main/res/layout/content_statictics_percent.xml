@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal"
+    tools:background="@android:color/black">
+
+    <LinearLayout
+        android:layout_width="@dimen/statistics_percent_block_width"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <FrameLayout
+            android:id="@+id/casesPercentLayout"
+            android:layout_width="@dimen/statistics_percent_width"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_statistics_percent_cases">
+
+            <TextView
+                android:id="@+id/casesPercent"
+                style="@style/StatisticsPercentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="0%" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:rotation="30"
+                android:src="@drawable/ic_statistics_percent_cases"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+        <TextView
+            style="@style/StatisticsInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="@string/statistics_cases" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/statistics_percent_block_width"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <FrameLayout
+            android:id="@+id/activePercentLayout"
+            android:layout_width="@dimen/statistics_percent_width"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_statistics_percent_active">
+
+            <TextView
+                android:id="@+id/activePercent"
+                style="@style/StatisticsPercentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="0%" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_statistics_percent_active"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+        <TextView
+            style="@style/StatisticsInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="@string/statistics_active" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/statistics_percent_block_width"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <FrameLayout
+            android:id="@+id/recoveredPercentLayout"
+            android:layout_width="@dimen/statistics_percent_width"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_statistics_percent_recovered">
+
+            <TextView
+                android:id="@+id/recoveredPercent"
+                style="@style/StatisticsPercentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="0%" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_statistics_percent_recovered"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+        <TextView
+            style="@style/StatisticsInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="@string/statistics_recovered" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/statistics_percent_block_width"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <FrameLayout
+            android:id="@+id/deathsPercentLayout"
+            android:layout_width="@dimen/statistics_percent_width"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_statistics_percent_deaths">
+
+            <TextView
+                android:id="@+id/deathsPercent"
+                style="@style/StatisticsPercentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="0%" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_statistics_percent_deaths"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+        <TextView
+            style="@style/StatisticsInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="@string/statistics_active" />
+
+    </LinearLayout>
+
+</LinearLayout>

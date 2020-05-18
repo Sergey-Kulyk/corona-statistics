@@ -13,12 +13,17 @@ import com.sergeykulyk.corona_statistics.ui.dashboard.symptoms.SymptomsFragment
 class DashboardPageAdapter(fragmentManager: FragmentManager) :
     FragmentPagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
+    val overviewFragment = OverviewFragment()
+    val symptomsFragment = SymptomsFragment()
+    val preventationFragment = PreventationFragment()
+    val statisticsFragment = StatisticsFragment()
+
     override fun getItem(position: Int): Fragment {
         return  when (position) {
-            1 -> SymptomsFragment()
-            2 -> PreventationFragment()
-            3 -> StatisticsFragment()
-            else -> StatisticsFragment()
+            1 -> symptomsFragment
+            2 -> preventationFragment
+            3 -> statisticsFragment
+            else -> overviewFragment
         }
     }
 

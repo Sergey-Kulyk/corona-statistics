@@ -7,5 +7,6 @@ data class OverviewStatistics(
     @DrawableRes val background: Int,
     @StringRes val title: Int,
     val number: String,
-    val percent: String
+    val percentFormatted: String,
+    val percent: Int
 )

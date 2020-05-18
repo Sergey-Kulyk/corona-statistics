@@ -1,7 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000">
+    android:clipToPadding="false"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    tools:background="#000">
+
+    <View
+        android:id="@+id/selector"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/ic_calendar_day_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/dayLayout1"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dayLayout2" />
+
+    <LinearLayout
+        android:id="@+id/dayLayout1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:minWidth="30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dayLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dayTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@color/blueDark"
+            android:textSize="20sp"
+            tools:text="S" />
+
+        <TextView
+            android:id="@+id/day1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="27" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dayLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dayLayout3"
+        app:layout_constraintStart_toEndOf="@+id/dayLayout1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dayTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@color/blueDark"
+            android:textSize="20sp"
+            tools:text="M" />
+
+        <TextView
+            android:id="@+id/day2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="28" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dayLayout3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dayLayout4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayLayout2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dayTitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@color/blueDark"
+            android:textSize="20sp"
+            tools:text="T" />
+
+        <TextView
+            android:id="@+id/day3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="29" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dayLayout4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dayLayout5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayLayout3"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dayTitle4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@color/blueDark"
+            android:textSize="20sp"
+            tools:text="W" />
+
+        <TextView
+            android:id="@+id/day4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="30" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dayLayout5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dayLayout6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayLayout4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dayTitle5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@color/blueDark"
+            android:textSize="20sp"
+            tools:text="T" />
+
+        <TextView
+            android:id="@+id/day5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dayLayout6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dayLayout7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayLayout5"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dayTitle6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@color/blueDark"
+            android:textSize="20sp"
+            tools:text="F" />
+
+        <TextView
+            android:id="@+id/day6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dayLayout7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dayLayout6"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dayTitle7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@color/blueDark"
+            android:textSize="20sp"
+            tools:text="S" />
+
+        <TextView
+            android:id="@+id/day7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="3" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

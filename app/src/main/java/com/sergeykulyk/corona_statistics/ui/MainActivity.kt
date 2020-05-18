@@ -5,6 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
+import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import com.sergeykulyk.corona_statistics.R
 import com.sergeykulyk.corona_statistics.ext.gone
@@ -21,13 +22,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        dashboardViewPager.adapter = DashboardPageAdapter(supportFragmentManager)
+        val adapter = DashboardPageAdapter(supportFragmentManager)
+        dashboardViewPager.adapter = adapter
         dashboardTabs.setupWithViewPager(dashboardViewPager)
         dashboardViewPager.offscreenPageLimit = 4
-//        val zoomOutPageTransformer = ZoomOutPageTransformer()
-////        dashboardViewPager.setPageTransformer(false) { page, position ->
-////            zoomOutPageTransformer.transformPage(page, position)
-////        }
 
         val tabOverview = dashboardTabs.getTabAt(0)
         val tabSymptoms = dashboardTabs.getTabAt(1)
@@ -77,6 +75,25 @@ class MainActivity : AppCompatActivity() {
                 tabViewChild.typeface =
                     ResourcesCompat.getFont(baseContext, R.font.ibm_plex_sans_medium)
                 tabViewChild.textSize = 14f
+            }
+        })
+        dashboardViewPager.setOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrollStateChanged(state: Int) {
+
+            }
+
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+
+            }
+
+            override fun onPageSelected(position: Int) {
+                if (position == 3) {
+                    adapter.statisticsFragment.startAnimation()
+                }
             }
         })
     }

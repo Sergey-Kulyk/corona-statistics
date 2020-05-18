@@ -19,3 +19,18 @@ class HorizontalSpaceItemDecoration(private val spaceWidth: Int) : ItemDecoratio
     }
 
 }
+
+class VerticalSpaceItemDecoration(private val spaceWidth: Int) : ItemDecoration() {
+
+    override fun getItemOffsets(
+        outRect: Rect,
+        view: View,
+        parent: RecyclerView,
+        state: RecyclerView.State
+    ) {
+        if (parent.adapter != null && parent.getChildAdapterPosition(view) != parent.adapter!!.itemCount - 1) {
+            outRect.bottom = spaceWidth
+        }
+    }
+
+}

@@ -60,7 +60,7 @@
         android:paddingEnd="24dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:itemCount="2"
+        tools:itemCount="3"
         tools:layout_editor_absoluteX="0dp"
         tools:listitem="@layout/item_statistics"
         tools:orientation="horizontal" />
