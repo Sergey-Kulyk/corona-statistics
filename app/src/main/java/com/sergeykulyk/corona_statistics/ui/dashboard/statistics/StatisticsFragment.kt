@@ -81,9 +81,10 @@ class StatisticsFragment : Fragment() {
             }
         }
         weekCalendarView.onMonthChangedListener = object : OnMonthChangedListener {
-            override fun onMonthChanged(name: String) {
-                monthName.text = name
+            override fun onMonthChanged(monthName: String) {
+
             }
+
         }
         view.postDelayed({
             weekCalendarView.selectCurrentDay()
@@ -262,7 +263,7 @@ class StatisticsFragment : Fragment() {
         set.start()
 
         if (!isAnimationsShown) {
-//            isAnimationsShown = true
+            isAnimationsShown = true
         }
     }
 

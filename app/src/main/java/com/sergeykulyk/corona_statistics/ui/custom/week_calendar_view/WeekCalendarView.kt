@@ -28,12 +28,12 @@ class WeekCalendarView(context: Context, attrs: AttributeSet?) : LinearLayout(co
             }
         weeksViewPager.adapter = weeksAdapter
         addView(weeksViewPager)
-        weeksViewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-                onMonthChangedListener?.onMonthChanged(theMonth(weeks[position].month) ?: "")
-            }
-        })
+//        weeksViewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+//            override fun onPageSelected(position: Int) {
+//                super.onPageSelected(position)
+//                onMonthChangedListener?.onMonthChanged(theMonth(weeks[position].month) ?: "")
+//            }
+//        })
     }
 
     fun theMonth(month: Int): String? {

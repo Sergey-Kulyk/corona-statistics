@@ -9,7 +9,7 @@
     <string name="statistics_cases">Cases</string>
     <string name="statistics_active">Active</string>
     <string name="statistics_recovered">Recovered</string>
-    <string name="statistics_death">Death</string>
+    <string name="statistics_death">Deaths</string>
 
     <string name="tab_overview">OVERVIEW</string>
     <string name="tab_symptoms">SYMPTOMS</string>
