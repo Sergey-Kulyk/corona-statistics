@@ -36,18 +36,6 @@ class PreventationSlidesBuilder {
             R.string.do_title_stay_at_home,
             R.string.do_description_stay_at_home
         )
-
-        return listOf(
-            wearMask,
-            washHands,
-            useTissues,
-            wellDoneCooking,
-            handsSanitiser,
-            stayAtHome
-        )
-    }
-
-    fun buildDontSlides(): List<Preventation> {
         val socialDistancing = Preventation(
             R.drawable.ic_dont_social_distancing,
             R.string.dont_title_social_distancing,
@@ -58,6 +46,20 @@ class PreventationSlidesBuilder {
             R.string.dont_title_go_to_doctor,
             R.string.dont_description_go_to_doctor
         )
+
+        return listOf(
+            wearMask,
+            washHands,
+            useTissues,
+            wellDoneCooking,
+            handsSanitiser,
+            stayAtHome,
+            socialDistancing,
+            goToDoctor
+        )
+    }
+
+    fun buildDontSlides(): List<Preventation> {
         val avoidAnimals = Preventation(
             R.drawable.ic_dont_avoid_animal,
             R.string.dont_title_avoid_animal,
@@ -75,8 +77,6 @@ class PreventationSlidesBuilder {
         )
 
         return listOf(
-            socialDistancing,
-            goToDoctor,
             avoidAnimals,
             avoidTouching,
             avoidCrowd
