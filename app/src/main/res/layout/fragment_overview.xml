@@ -35,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/logo"
         tools:ignore="ContentDescription" />
 
-    <com.sergeykulyk.map_statistics.MapContinentView
+    <com.corona.map_statistics.MapContinentView
         android:id="@+id/mapStatisticsView"
         android:layout_width="match_parent"
         android:layout_height="200dp"

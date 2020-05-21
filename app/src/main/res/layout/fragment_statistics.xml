@@ -56,7 +56,7 @@
                             android:layout_marginTop="40dp"
                             android:text="@string/tab_statistics" />
 
-                        <com.sergeykulyk.corona_statistics.ui.custom.week_calendar_view.WeekCalendarView
+                        <com.corona.statistics.ui.custom.week_calendar_view.WeekCalendarView
                             android:id="@+id/weekCalendarView"
                             android:layout_width="match_parent"
                             android:layout_height="100dp"

@@ -58,7 +58,7 @@
 
     </LinearLayout>
 
-    <com.sergeykulyk.corona_statistics.ui.dashboard.preventation.NonSwipeableViewPager
+    <com.corona.statistics.ui.dashboard.preventation.NonSwipeableViewPager
         android:id="@+id/preventationViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
